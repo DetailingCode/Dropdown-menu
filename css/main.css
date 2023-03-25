@@ -67,18 +67,19 @@ header .nav-logo {
 .navbar .navbar__item-dropdown-link ul {
   display: none;
   position: absolute;
-  left: 12%;
+  left: 45%;
   width: 130px;
   text-align: center;
   font-size: 1.2rem;
   background-color: rgba(8, 8, 8, 0.3);
   background-image: linear-gradient(180deg, rgb(8, 8, 8) 59%, rgb(56, 56, 56) 100%);
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 10px 10px 10px;
   z-index: 999;
+  overflow: hidden;
 }
 .navbar .navbar__item-dropdown-link .navbar__item-dropdown {
   width: 100%;
-  border-bottom: 1px solid rgba(255, 127, 80, 0.2);
+  border-bottom: 1px solid rgba(255, 166, 0, 0.301);
 }
 
 #menu-bar {
@@ -94,6 +95,9 @@ header .nav-logo {
 }
 
 @media (max-width: 992px) {
+  .navbar__item-dropdown-link ul {
+    margin-top: -30px;
+  }
   header {
     padding: 2em;
   }
@@ -103,7 +107,7 @@ header .nav-logo {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 127, 80, 0.1);
+    border-top: 1px solid rgba(156, 156, 156, 0.1);
     display: none;
     transition: 0.3s;
   }
@@ -115,7 +119,7 @@ header .nav-logo {
     width: 100%;
   }
   header .navbar ul li ul li {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(214, 214, 214, 0.1);
   }
   header .navbar ul li ul li ul {
     width: 100%;
