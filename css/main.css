@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #ffffff;
+  min-height: 150vh;
+  font-family: "Open Sans", sans-serif;
+  background-image: url(../img/david-marcu-7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+header .nav-logo {
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 75px;
+}
+
+.navbar ul li:focus-within > ul,
+.navbar ul li:hover > ul {
+  display: initial;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+.navbar ul li {
+  position: relative;
+  float: left;
+}
+.navbar ul li a {
+  display: block;
+  font-weight: bold;
+  padding: 1.5em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+.navbar ul li a:hover {
+  color: #ff7f50;
+}
+.navbar .navbar__item-dropdown-link ul {
+  display: none;
+  position: absolute;
+  left: 12%;
+  width: 130px;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: rgba(8, 8, 8, 0.3);
+  background-image: linear-gradient(180deg, rgb(8, 8, 8) 59%, rgb(56, 56, 56) 100%);
+  border-radius: 0px 0px 10px 10px;
+  z-index: 999;
+}
+.navbar .navbar__item-dropdown-link .navbar__item-dropdown {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 127, 80, 0.2);
+}
+
+#menu-bar {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 2.2rem;
+  padding: 1em;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 2em;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid rgba(255, 127, 80, 0.1);
+    display: none;
+    transition: 0.3s;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 10%;
+  }
+  header .fa-bars {
+    display: initial;
+    transition: 0.3s;
+  }
+  header header label {
+    display: initial;
+  }
+  #menu-bar:checked ~ .navbar {
+    transition: 0.3s;
+    display: initial;
+  }
+}/*# sourceMappingURL=main.css.map */
